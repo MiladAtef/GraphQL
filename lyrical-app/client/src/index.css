@@ -10,3 +10,22 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+.collection-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.material-icons {
+	cursor: pointer;
+	margin-right: 7px;
+}
+.fixed-to-bottom {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+.vote-box {
+	display: flex;
+	align-items: center;
+}

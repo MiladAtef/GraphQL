@@ -7,7 +7,7 @@ import { HttpLink } from 'apollo-link-http';
 import { ApolloProvider } from 'react-apollo';
 import App from './components/App';
 
-const cache = new InMemoryCache();
+const cache = new InMemoryCache({ dataIdFromObject: o => o.id });
 const link = new HttpLink({
 	uri: 'http://localhost:5000/graphql'
 });

@@ -1,16 +1,18 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import history from '../history';
 import SongList from './SongList';
 import SongCreate from './SongCreate';
+import SongDetails from './SongDetails';
 
 const App = () => (
 	<div className="container">
 		<Router history={history}>
-			<React.Fragment>
+			<Switch>
 				<Route exact path="/" component={SongList} />
 				<Route path="/songs/new" component={SongCreate} />
-			</React.Fragment>
+				<Route path="/songs/:id" component={SongDetails} />
+			</Switch>
 		</Router>
 	</div>
 );
