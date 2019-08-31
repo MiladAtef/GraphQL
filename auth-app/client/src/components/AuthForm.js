@@ -7,14 +7,16 @@ class AuthForm extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
-	handleSubmit = e => {
+	handleFormSubmit = e => {
 		e.preventDefault();
+		const { email, password } = this.state;
+		this.props.onSubmit({ email, password });
 	};
 
 	render() {
 		return (
 			<div className="row">
-				<form className="col s6" onSubmit={this.handleSubmit}>
+				<form className="col s6" onSubmit={this.handleFormSubmit}>
 					<div className="input-field">
 						<input
 							type="email"
