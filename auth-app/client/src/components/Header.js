@@ -18,7 +18,7 @@ class Header extends Component {
 		if (loading) return <div />;
 
 		// the user is not null and has an object assign to it
-		// means that the user is currently logged in
+		// means that the user is currently loggedIn
 		if (user) {
 			return (
 				<li>
